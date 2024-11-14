@@ -31,7 +31,7 @@ class AccountService(ServiceBase):
         acc.balance=account.balance
         acc.creation_date=account.creationDate
         acc.save()
-        return 'The account with RIB {account.rib} is successfully created.'
+        return f'The account with RIB {account.rib} is successfully created.'
 
     @rpc(Unicode,_returns=complexAccount)
     def get_account_details(self, email:str)-> complexAccount:
